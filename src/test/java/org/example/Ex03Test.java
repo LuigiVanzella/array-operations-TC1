@@ -59,24 +59,24 @@ public class Ex03Test {
 
     }
 
-    @ParameterizedTest
-    @CsvSource({"6, 6", "7, 7", "8, 8", "9, 9", "10, 10"})
+    @Test
     @DisplayName("Add number")
-    void AddNumber(int input, int expectedLength){
+    void AddNumber(){
         int[] array = {1,2,3,4,5};
         Ex03 ex03 = new Ex03(array);
-        ex03.compareNumber(input);
-        assertEquals(expectedLength, ex03.getArrayLength());
+        ex03.compareNumber(6);
+        assertEquals(6, ex03.getArrayLength());
     }
 
-    @ParameterizedTest
-    @CsvSource({"1, 4", "2, 3", "3, 2", "4, 1", "5, 0"})
+    @Test
     @DisplayName("Remove number")
-    void RemoveNumber(int input, int expectedLength){
+    void RemoveNumber(){
         int[] array = {1,2,3,4,5};
         Ex03 ex03 = new Ex03(array);
-        ex03.compareNumber(input);
-        assertEquals(expectedLength, ex03.getArrayLength());
+        ex03.compareNumber(1);
+        ex03.compareNumber(2);
+        ex03.compareNumber(3);
+        assertEquals(2, ex03.getArrayLength());
     }
 
 
