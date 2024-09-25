@@ -32,5 +32,23 @@ public class Ex03Test {
     }
 
 
+    @Test
+    @DisplayName("Should array length equals zero")
+    void ShouldArrayLengthEqualsZero(){
+        int[] array = {1,2,3,4,5};
+        Ex03 ex03 = new Ex03(array);
+        ex03.compareNumber(1);
+        ex03.compareNumber(2);
+        ex03.compareNumber(3);
+        ex03.compareNumber(4);
+        ex03.compareNumber(5);
+
+        assertEquals(0,ex03.getArrayLength());
+
+    }
+
+
+
+
 
 }
