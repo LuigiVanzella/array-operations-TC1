@@ -2,6 +2,8 @@ package org.example;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -57,11 +59,16 @@ public class Ex03Test {
 
     }
 
-    @Test
+    @ParameterizedTest
+    @CsvSource({"6, 6", "7, 7", "8, 8", "9, 9", "10, 10"})
     @DisplayName("Add number")
-    void AddNumber(){
-
+    void AddNumber(int input, int expectedLength){
+        int[] array = {1,2,3,4,5};
+        Ex03 ex03 = new Ex03(array);
+        ex03.compareNumber(input);
+        assertEquals(expectedLength, ex03.getArrayLength());
     }
+
 
 
 
