@@ -69,6 +69,16 @@ public class Ex03Test {
         assertEquals(expectedLength, ex03.getArrayLength());
     }
 
+    @ParameterizedTest
+    @CsvSource({"1, 4", "2, 3", "3, 2", "4, 1", "5, 0"})
+    @DisplayName("Remove number")
+    void RemoveNumber(int input, int expectedLength){
+        int[] array = {1,2,3,4,5};
+        Ex03 ex03 = new Ex03(array);
+        ex03.compareNumber(input);
+        assertEquals(expectedLength, ex03.getArrayLength());
+    }
+
 
 
 
