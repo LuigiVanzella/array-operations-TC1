@@ -15,6 +15,10 @@ public class Ex03 {
         return new int[]{};
     }
 
+    public int getArrayLength(){
+        return 0;
+    }
+
 
 
 }
