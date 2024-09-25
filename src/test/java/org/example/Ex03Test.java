@@ -47,6 +47,21 @@ public class Ex03Test {
 
     }
 
+    @Test
+    @DisplayName("Should new number negative")
+    void ShouldNewNumberNegative() {
+        int[] array = {1,2,3,4,5};
+        Ex03 ex03 = new Ex03(array);
+        ex03.compareNumber(-1);
+        assertThrows(IllegalArgumentException.class, () -> new Ex03(array));
+
+    }
+
+    @Test
+    @DisplayName("Add number")
+    void AddNumber(){
+
+    }
 
 
 
